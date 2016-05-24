@@ -1,20 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-var PersonLogin = React.createClass({
-  render: function () {
-    return (
-      <div>
-        <PersonLoginLogo/>
-        <PersonLoginSocial/>
-        <PersonLoginForm/>
-        <hr/>
-        <PersonLoginNew/>
-      </div>
-    );
-  }
-});
-
 var PersonLoginLogo = React.createClass({
   render: function () {
     return (
@@ -50,6 +36,20 @@ var PersonLoginNew = React.createClass({
     return (
       <div>
         New?
+      </div>
+    );
+  }
+});
+
+var PersonLogin = React.createClass({
+  render: function () {
+    return (
+      <div>
+        <PersonLoginLogo/>
+        <PersonLoginSocial/>
+        <PersonLoginForm/>
+        <hr/>
+        <PersonLoginNew/>
       </div>
     );
   }
