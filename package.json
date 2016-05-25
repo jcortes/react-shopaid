@@ -4,8 +4,7 @@
   "description": "ShoPaid",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --content-base public",
-    "build": "./node_modules/webpack/bin/webpack.js -w"
+    "start": "webpack-dev-server --content-base public/"
   },
   "repository": {
     "type": "git",
