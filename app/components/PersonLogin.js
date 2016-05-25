@@ -1,48 +1,47 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
 
-var PersonLoginLogo = React.createClass({
-  render: function () {
+class PersonLoginLogo extends React.Component {
+  render () {
     return (
       <div>
         Logo
       </div>
     );
   }
-});
+}
 
-var PersonLoginSocial = React.createClass({
-  render: function () {
+class PersonLoginSocial extends React.Component {
+  render () {
     return (
       <div>
         Social
       </div>
     );
   }
-});
+}
 
-var PersonLoginForm = React.createClass({
-  render: function () {
+class PersonLoginForm extends React.Component {
+  render () {
     return (
       <div>
         LoginForm
       </div>
     );
   }
-});
+}
 
-var PersonLoginNew = React.createClass({
-  render: function () {
+class PersonLoginNew extends React.Component {
+  render () {
     return (
       <div>
         New?
       </div>
     );
   }
-});
+}
 
-var PersonLogin = React.createClass({
-  render: function () {
+class PersonLogin extends React.Component {
+  render () {
     return (
       <div>
         <PersonLoginLogo/>
@@ -53,6 +52,6 @@ var PersonLogin = React.createClass({
       </div>
     );
   }
-});
+}
 
 module.exports = PersonLogin;

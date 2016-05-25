@@ -1,14 +1,11 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Route = require('react-router').Route;
-var IndexRoute = require('react-router').IndexRoute;
-var Main = require('../components/Main');
-var Home = require('../components/Home');
-var PersonLogin = require('../components/PersonLogin');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Route, IndexRoute} from 'react-router';
+import PersonLogin from '../components/PersonLogin';
 
 module.exports = (
-  <Route path="/" component={Main}>
+  <Route path="/" component={PersonLogin}>
     <Route path="/login" component={PersonLogin} />
-    <IndexRoute component={Home} />
+    <IndexRoute component={PersonLogin} />
   </Route>
 );
