@@ -54,4 +54,4 @@ class PersonLogin extends React.Component {
   }
 }
 
-module.exports = PersonLogin;
+export default PersonLogin;
