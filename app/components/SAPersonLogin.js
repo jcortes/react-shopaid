@@ -35,7 +35,7 @@ const styles = {
   }
 };
 
-class PersonLoginLogo extends React.Component {
+class SAPersonLoginLogo extends React.Component {
   render () {
     return (
       <div>
@@ -46,7 +46,7 @@ class PersonLoginLogo extends React.Component {
   }
 }
 
-class PersonLoginSocial extends React.Component {
+class SAPersonLoginSocial extends React.Component {
   render () {
     return (
       <div>
@@ -76,7 +76,7 @@ class PersonLoginSocial extends React.Component {
   }
 }
 
-class PersonLoginForm extends React.Component {
+class SAPersonLoginForm extends React.Component {
   render () {
     return (
       <form>
@@ -101,7 +101,7 @@ class PersonLoginForm extends React.Component {
   }
 }
 
-class PersonLoginNew extends React.Component {
+class SAPersonLoginNew extends React.Component {
   render () {
     return (
       <div>
@@ -112,18 +112,18 @@ class PersonLoginNew extends React.Component {
   }
 }
 
-class PersonLogin extends React.Component {
+class SAPersonLogin extends React.Component {
   render () {
     return (
       <div style={styles.container}>
-        <PersonLoginLogo/>
-        <PersonLoginSocial/>
-        <PersonLoginForm/>
+        <SAPersonLoginLogo/>
+        <SAPersonLoginSocial/>
+        <SAPersonLoginForm/>
         <hr/>
-        <PersonLoginNew/>
+        <SAPersonLoginNew/>
       </div>
     );
   }
 }
 
-export default PersonLogin;
+export default SAPersonLogin;
