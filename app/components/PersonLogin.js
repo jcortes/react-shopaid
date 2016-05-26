@@ -1,10 +1,46 @@
 import React from 'react';
+import Paper from 'material-ui/Paper';
+import IconButton from 'material-ui/IconButton';
+import ActionHome from 'material-ui/svg-icons/action/home';
+import TextField from 'material-ui/TextField';
+import RaisedButton from 'material-ui/RaisedButton';
+import {Link} from 'react-router';
+
+const styles = {
+  container: {
+    textAlign: 'center',
+    paddingTop: 50
+  },
+  logo: {
+    height: 100,
+    width: 100,
+    margin: 20,
+    textAlign: 'center',
+    display: 'inline-block'
+  },
+  socialButton: {
+    mediumIcon: {
+      width: 48,
+      height: 48,
+    },
+    medium: {
+      width: 96,
+      height: 96,
+      padding: 24,
+    }
+  },
+  enterButton: {
+  },
+  registerButton: {
+  }
+};
 
 class PersonLoginLogo extends React.Component {
   render () {
     return (
       <div>
-        Logo
+        <Paper style={styles.logo} zDepth={1} circle={true} />
+        <h2>SHOPAID</h2>
       </div>
     );
   }
@@ -14,7 +50,27 @@ class PersonLoginSocial extends React.Component {
   render () {
     return (
       <div>
-        Social
+        <span>Login with:</span>
+        <IconButton
+          iconStyle={styles.socialButton.smallIcon}
+          style={styles.socialButton.small}>
+          <ActionHome />
+        </IconButton>
+        <IconButton
+          iconStyle={styles.socialButton.smallIcon}
+          style={styles.socialButton.small}>
+          <ActionHome />
+        </IconButton>
+        <IconButton
+          iconStyle={styles.socialButton.smallIcon}
+          style={styles.socialButton.small}>
+          <ActionHome />
+        </IconButton>
+        <IconButton
+          iconStyle={styles.socialButton.smallIcon}
+          style={styles.socialButton.small}>
+          <ActionHome />
+        </IconButton>
       </div>
     );
   }
@@ -23,9 +79,24 @@ class PersonLoginSocial extends React.Component {
 class PersonLoginForm extends React.Component {
   render () {
     return (
-      <div>
-        LoginForm
-      </div>
+      <form>
+        <p>Registered with an email:</p>
+        <TextField
+          hintText="Email"
+          floatingLabelText="Email"/>
+        <br/>
+        <TextField
+          hintText="Password"
+          floatingLabelText="Password"
+          type="password"/>
+        <br/>
+        <br/>
+        <RaisedButton label="Enter" primary={true} style={styles.enterButton} />
+        <br/>
+        <br/>
+        <Link to="/forgot-password">Forgot password?</Link>
+        <br/>
+      </form>
     );
   }
 }
@@ -34,7 +105,8 @@ class PersonLoginNew extends React.Component {
   render () {
     return (
       <div>
-        New?
+        <p>New User?</p>
+        <RaisedButton label="Register" secondary={true} style={styles.registerButton} />
       </div>
     );
   }
@@ -43,7 +115,7 @@ class PersonLoginNew extends React.Component {
 class PersonLogin extends React.Component {
   render () {
     return (
-      <div>
+      <div style={styles.container}>
         <PersonLoginLogo/>
         <PersonLoginSocial/>
         <PersonLoginForm/>
