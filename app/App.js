@@ -3,6 +3,7 @@ import {render} from 'react-dom';
 import {Router, hashHistory} from 'react-router';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import routes from './config/routes';
+require('./styles/app.less');
 
 //Needed for onTouchTap
 //Can go away when react 1.0 release

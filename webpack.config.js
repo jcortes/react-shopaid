@@ -1,5 +1,8 @@
 module.exports = {
-  entry: "./app/App.js",
+  entry: [
+    "./app/App.js",
+    "./app/styles/app.less"
+  ],
   output: {
     filename: "./public/bundle.js"
   },
@@ -16,6 +19,14 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         }
+      },
+      {
+        test: /\.less$/,
+        loader: 'style-loader!css-loader!less-loader'
+      }, // use ! to chain loaders
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
       }
     ]
   }
