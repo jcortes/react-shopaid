@@ -2,9 +2,11 @@
   "name": "react-shopaid",
   "version": "1.0.0",
   "description": "ShoPaid",
-  "main": "index.js",
+  "main": "app/App.js",
   "scripts": {
-    "start": "webpack-dev-server --content-base public/"
+    "serve": "webpack-dev-server -d --config webpack.config.development.js --content-base www/ --progress --colors --history-api-fallback",
+    "build": "webpack -p --config webpack.config.production.js --profile --progress --colors",
+    "lint": "eslint ./*.js ./**/*.js"
   },
   "repository": {
     "type": "git",

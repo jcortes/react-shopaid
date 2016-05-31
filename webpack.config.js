@@ -4,7 +4,8 @@ module.exports = {
     "./app/styles/app.less"
   ],
   output: {
-    filename: "./public/bundle.js"
+    path: __dirname + '/www/',
+    filename: "bundle.js"
   },
   devServer: {
     inline: true,
@@ -13,7 +14,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
+        test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
         loader: "babel",
         query: {
@@ -29,5 +30,6 @@ module.exports = {
         loader: 'style-loader!css-loader'
       }
     ]
-  }
+  },
+  plugins: []
 }
